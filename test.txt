@@ -3,3 +3,4 @@ What is this file
 Conventional Commit
 Commit #1 
 Commit #2
+Commit #3
