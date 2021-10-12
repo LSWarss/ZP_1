@@ -2,3 +2,4 @@ That is kinda not cool
 What is this file
 Conventional Commit
 Commit #1 
+Commit #2
