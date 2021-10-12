@@ -1,1 +1,3 @@
 Merge conflict test
+That is kinda not cool 
+What is this file
