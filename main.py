@@ -1,4 +1,4 @@
-from typing import * 
+from typing import Union
 
 def printer(namesArray : list[str]):
     """Prints names from the given array
@@ -23,7 +23,7 @@ def doubler(numbers : Union[list[int], list[float]]) -> Union[list[int], list[in
         returnArray.append(number * 2)
     return returnArray
 
-def arrayDoubler(numbers : Union[list[int], list[float]]) -> Union[list[int], list[int]]:
+def array_doubler(numbers : Union[list[int], list[float]]) -> Union[list[int], list[int]]:
     """Returns given array with all numbers multiplied by 2
 
     Args:
@@ -34,7 +34,7 @@ def arrayDoubler(numbers : Union[list[int], list[float]]) -> Union[list[int], li
     """
     return [(number * 2) for number in numbers]
 
-def oddInArray(numbers : Union[list[int], list[float]]):
+def odd_in_array(numbers : Union[list[int], list[float]]):
     """Prints out odd numbers in given array
 
     Args:
@@ -44,7 +44,7 @@ def oddInArray(numbers : Union[list[int], list[float]]):
         if number % 2 != 0:
             print(number)
 
-def evenInArray(numbers : Union[list[int], list[float]]):
+def even_in_array(numbers : Union[list[int], list[float]]):
     """Prints out even numbers in given array
 
     Args:
@@ -54,7 +54,7 @@ def evenInArray(numbers : Union[list[int], list[float]]):
         if number % 2 == 0:
             print(number)
 
-def everySecondFromArray(numbers : Union[list[int], list[float]]):
+def every_second_from_array(numbers : Union[list[int], list[float]]):
     """Prints out every second number in given array
 
     Args:
@@ -64,9 +64,22 @@ def everySecondFromArray(numbers : Union[list[int], list[float]]):
         if i % 2 == 0:
             print(n)
 
+def helloer(name: str, surname: str) -> str:
+    """Returns Cześć string with name and surname
+
+    Args:
+        name (str): Name of the user 
+        surname (str): Surname of the user
+
+    Returns:
+        str: String with "Cześć" and name + surname
+    """
+    return f"Cześć {name} {surname}!"
+
 printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
-print(arrayDoubler([1,2,3,4,5,6]))
+print(array_doubler([1,2,3,4,5,6]))
 print(doubler([1,2,3,4,5,6]))
-print(oddInArray([1,2,3,4,5,6,7,8,9,10]))
-print(evenInArray([1,2,3,4,5,6,7,8,9,10]))
-print(everySecondFromArray([1,3,5,123,23,23,56,1]))
+print(odd_in_array([1,2,3,4,5,6,7,8,9,10]))
+print(even_in_array([1,2,3,4,5,6,7,8,9,10]))
+print(every_second_from_array([1,3,5,123,23,23,56,1]))
+print(helloer("Łukasz", "Stachnik"))
