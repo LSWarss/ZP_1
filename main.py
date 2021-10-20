@@ -1,5 +1,8 @@
 from typing import Union
 
+from requests.api import get
+from Brawery import getBraweries
+
 def printer(namesArray : list[str]):
     """Prints names from the given array
 
@@ -76,6 +79,70 @@ def helloer(name: str, surname: str) -> str:
     """
     return f"Cześć {name} {surname}!"
 
+def multiplier(number1: int, number2: int) -> int:
+    """Takes two numbers and multiplies them
+
+    Args:
+        number1 (int): Number 1
+        number2 (int): Number 2
+
+    Returns:
+        int: Multiplication of number 1 and 2
+    """
+    return number1 * number2
+
+def is_even(number: Union[int, float]) -> bool:
+    """Checks if the given number is even
+
+    Args:
+        number (Union[int, float]): Number of type int or float
+
+    Returns:
+        bool: Bool if the given number is true or false
+    """
+    return number % 2 == 0
+
+def check_if_bigger(number1: int, number2: int, number3 : int) -> bool:
+    """Checks if sum of first two numbers is bigger then third number
+
+    Args:
+        number1 (int): First number
+        number2 (int): Second number
+        number3 (int): Third number
+
+    Returns:
+        bool: Bool if the sum of first two numbers is greater then third
+    """
+    return (number1 + number2) > number3
+
+def check_if_contains(list : list, number : int) -> bool:
+    """Checks if given list contains given number
+
+    Args:
+        list (list): Generic list 
+        number (int): Some number
+
+    Returns:
+        bool: Bool if the list contains given number
+    """
+    return list.__contains__(number)
+
+def merge_and_pow3(list1: list, list2: list) -> list:
+    """Takes in two list and merges them together and raises all elements to power of 3
+
+    Args:
+        list1 (list): List 1
+        list2 (list): List 2
+
+    Returns:
+        list: Array of not duplicates raised to power of 3
+    """
+    in_first = set(list1)
+    in_second = set(list2)
+    in_second_but_not_in_first = in_second - in_first
+    result = list1 + list(in_second_but_not_in_first)
+    return [(number**3) for number in result]
+
 printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
 print(array_doubler([1,2,3,4,5,6]))
 print(doubler([1,2,3,4,5,6]))
@@ -83,3 +150,5 @@ print(odd_in_array([1,2,3,4,5,6,7,8,9,10]))
 print(even_in_array([1,2,3,4,5,6,7,8,9,10]))
 print(every_second_from_array([1,3,5,123,23,23,56,1]))
 print(helloer("Łukasz", "Stachnik"))
+
+getBraweries()
