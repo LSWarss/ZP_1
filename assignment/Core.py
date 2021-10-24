@@ -1,7 +1,7 @@
 from typing import Union, List
 import argparse
-
-from Brawery import getBraweries, getBraweriesForCity
+import Brawery
+# from Brawery import getBraweries, getBraweriesForCity
 
 def printer(namesArray : List[str]):
     """Prints names from the given array
@@ -156,11 +156,11 @@ def merge_and_pow3(list1: list, list2: list) -> list:
 # for brawery in getBraweries():
 #     print(brawery.__str__)
 
-parser = argparse.ArgumentParser(description="This is main executable file for Advanced Programming Classes")
-parser.add_argument("--city",
-                    type=str,
-                    help="City which you want to search for :)")
-args = parser.parse_args()
+# parser = argparse.ArgumentParser(description="This is main executable file for Advanced Programming Classes")
+# parser.add_argument("--city",
+#                     type=str,
+#                     help="City which you want to search for :)")
+# args = parser.parse_args()
 
-city = args.city
-print(getBraweriesForCity(city))
+# city = args.city
+# print(getBraweriesForCity(city))
