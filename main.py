@@ -12,56 +12,56 @@ def printer(namesArray : List[str]):
     for name in namesArray:
         print(name) 
 
-def doubler(numbers : List[int, float]) -> List[int, float]:
+def doubler(numbers : Union[List[int], List[float]]) -> Union[List[int], List[float]]:
     """Returns given array with all numbers multiplied by 2
 
     Args:
-        numbers (List[int, float]): Array of numbers
+        numbers (Union[List[int], List[float]]): Array of numbers
 
     Returns:
-        List[int, float]: Array of numbers muliplied by 2
+        Union[List[int], List[float]]: Array of numbers muliplied by 2
     """
     returnArray = []
     for number in numbers:
         returnArray.append(number * 2)
     return returnArray
 
-def array_doubler(numbers : Union[int, float]) -> Union[int, int]:
+def array_doubler(numbers : Union[List[int], List[float]]) -> Union[List[int], List[float]]:
     """Returns given array with all numbers multiplied by 2
 
     Args:
-        numbers (List[int, float]): Array of numbers
+        numbers (Union[List[int], List[float]]): Array of numbers
 
     Returns:
-        Union[list[int], list[int]]: Array of numbers muliplied by 2
+        Union[List[int], List[float]]: Array of numbers muliplied by 2
     """
     return [(number * 2) for number in numbers]
 
-def odd_in_array(numbers : List[int, float]):
+def odd_in_array(numbers : Union[List[int], List[float]]):
     """Prints out odd numbers in given array
 
     Args:
-        numbers (List[int, float]): Array of number
+        numbers (Union[List[int], List[float]]): Array of number
     """
     for number in numbers: 
         if number % 2 != 0:
             print(number)
 
-def even_in_array(numbers : List[int, float]):
+def even_in_array(numbers : Union[List[int], List[float]]):
     """Prints out even numbers in given array
 
     Args:
-        numbers (List[int, float]): Array of number
+        numbers (Union[List[int], List[float]]): Array of number
     """
     for number in numbers: 
         if number % 2 == 0:
             print(number)
 
-def every_second_from_array(numbers : List[int, float]):
+def every_second_from_array(numbers : Union[List[int], List[float]]):
     """Prints out every second number in given array
 
     Args:
-        numbers (List[int, float]): [
+        numbers (Union[List[int], List[float]]): [
     """
     for i,n in enumerate(numbers):
         if i % 2 == 0:
@@ -91,11 +91,11 @@ def multiplier(number1: int, number2: int) -> int:
     """
     return number1 * number2
 
-def is_even(number: List[int, float]) -> bool:
+def is_even(number: Union[List[int], List[float]]) -> bool:
     """Checks if the given number is even
 
     Args:
-        number (List[int, float]): Number of type int or float
+        number (Union[List[int], List[float]]): Number of type int or float
 
     Returns:
         bool: Bool if the given number is true or false
