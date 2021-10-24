@@ -1,7 +1,7 @@
 from typing import Union, List
+import argparse
 
-from requests.api import get
-from Brawery import getBraweries
+from Brawery import getBraweries, getBraweriesForCity
 
 def printer(namesArray : List[str]):
     """Prints names from the given array
@@ -143,12 +143,24 @@ def merge_and_pow3(list1: list, list2: list) -> list:
     result = list1 + list(in_second_but_not_in_first)
     return [(number**3) for number in result]
 
-printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
-print(array_doubler([1,2,3,4,5,6]))
-print(doubler([1,2,3,4,5,6]))
-print(odd_in_array([1,2,3,4,5,6,7,8,9,10]))
-print(even_in_array([1,2,3,4,5,6,7,8,9,10]))
-print(every_second_from_array([1,3,5,123,23,23,56,1]))
-print(helloer("Łukasz", "Stachnik"))
+# I printed out the assignment goals while it would trigger with every exec
 
-getBraweries()
+# printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
+# print(array_doubler([1,2,3,4,5,6]))
+# print(doubler([1,2,3,4,5,6]))
+# print(odd_in_array([1,2,3,4,5,6,7,8,9,10]))
+# print(even_in_array([1,2,3,4,5,6,7,8,9,10]))
+# print(every_second_from_array([1,3,5,123,23,23,56,1]))
+# print(helloer("Łukasz", "Stachnik"))
+
+# for brawery in getBraweries():
+#     print(brawery.__str__)
+
+parser = argparse.ArgumentParser(description="This is main executable file for Advanced Programming Classes")
+parser.add_argument("--city",
+                    type=str,
+                    help="City which you want to search for :)")
+args = parser.parse_args()
+
+city = args.city
+print(getBraweriesForCity(city))
