@@ -13,7 +13,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, List, TypeVar, Callable, Type, cast
-import dateutil.parser
+# from dateutil import parser
 import json
 
 import requests
@@ -37,8 +37,8 @@ def from_none(x: Any) -> Any:
     return x
 
 
-def from_datetime(x: Any) -> datetime:
-    return dateutil.parser.parse(x)
+# def from_datetime(x: Any) -> datetime:
+#     return parser.parse(x)
 
 
 def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
