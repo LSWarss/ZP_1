@@ -1,7 +1,7 @@
 from typing import Union, List
 import argparse
-import Brawery
-# from Brawery import getBraweries, getBraweriesForCity
+# from Brawery import Brawery
+from Brawery import getBraweries, getBraweriesForCity
 
 def printer(namesArray : List[str]):
     """Prints names from the given array
@@ -145,9 +145,9 @@ def merge_and_pow3(list1: list, list2: list) -> list:
 
 # I printed out the assignment goals while it would trigger with every exec
 
-# printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
+printer(["Kasia", "Basia", "Michał", "Piotr", "Kot", "Ziobro"])
 # print(array_doubler([1,2,3,4,5,6]))
-# print(doubler([1,2,3,4,5,6]))
+print(doubler([1,2,3,4,5,6]))
 # print(odd_in_array([1,2,3,4,5,6,7,8,9,10]))
 # print(even_in_array([1,2,3,4,5,6,7,8,9,10]))
 # print(every_second_from_array([1,3,5,123,23,23,56,1]))
