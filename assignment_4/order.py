@@ -1,17 +1,6 @@
 import datetime
-from dataclasses import dataclass
+from book import Book
 from student import Student
-
-@dataclass
-class Book(): 
-    def __init__(self, title: str, author: str, code: int):
-        self._title = title
-        self._author = author
-        self._code = code
-
-    def __str__(self) -> str:
-        return f"Book {self._title}, by {self._author} with code: {self._code}"
-
 
 class Order():
 
