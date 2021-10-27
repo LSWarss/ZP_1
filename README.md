@@ -66,5 +66,5 @@ Stworzyć po jednym obiekcie klasy House oraz Flat, a następnie je wyświetlić
 
 ### Running Tests
 ```bash
- python -m unittest discover -s tests -p '*_test.py'
+ python3 -m unittest discover -s tests -p '*_test.py'
 ```

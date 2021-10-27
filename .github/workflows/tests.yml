@@ -1,0 +1,16 @@
+name: Testing
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Python version 
+        run: |
+          python3 --version
+      - name: Run Tests
+        run: |
+          python3 -m unittest discover -s assignment_3 -p '*_test.py'
+          python3 -m unittest discover -s assignment_4 -p '*_test.py'
