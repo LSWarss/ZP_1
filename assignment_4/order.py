@@ -1,10 +1,11 @@
 import datetime
+from employee import Employee
 from book import Book
 from student import Student
 
 class Order():
 
-    def __init__(self, employee: str, student: Student, books: list[Book], order_date: datetime.date):
+    def __init__(self, employee: Employee, student: Student, books, order_date: datetime.date):
         self._employee = employee
         self._student = student
         self._books = books
