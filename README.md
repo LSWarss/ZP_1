@@ -1,43 +1,70 @@
 # Advanced Programming Python Repo
 
-## Lab 3 Branch
+## Lab 4 Branch
 ---
 ### List of assignments: 
 
-1. Stworzyć funkcję, która przyjmuje 2 argumenty (typu string ) name i surname , a
-następnie zwróci stringa zgodnie ze wzorem Cześć {name} {surname}! Należy
-uruchomić funkcję, wynik wykonania funkcji zapisać do zmiennej, a następnie go
-wyświetlić ( print )
-2. Stworzyć funkcję, która przyjmie 2 argumenty typu int , a następnie zwróci wynik
-mnożenia obu liczb.
-3. Stworzyć funkcję, która będzie sprawdzała czy przekazana liczba w parametrze jest
-parzysta i zwróci tą informację jako typ logiczny bool ( True / False ). Należy
-uruchomić funkcję, wynik wykonania zapisać do zmiennej, a następnie
-wykorzystując warunek logiczny wyświetlić prawidłowy tekst "Liczba parzysta" /
-"Liczba nieparzysta"
-4. Stworzyć funkcję, która przyjmie 3 argumenty typu int i sprawdzi czy suma dwóch
-pierwszych liczb jest większa lub równa trzeciej, a następnie zwróci tę informację
-jako typ logiczny bool
-5. Stworzyć funkcję, która przyjmie 2 argumenty. Pierwszy typu list , a drugi typu int
-. Funkcja ma sprawdzić, czy lista z parametru pierwszego zawiera taką wartość
-jaką przekazano w parametrze drugim.
-6. Stworzyć funkcję, która przyjmuje 2 argumenty typu list i zwraca wynik typu list .
-Funkcja ma za zadanie złączyć przekazane listy w jedną, usunąć duplikaty, każdy
-element podnieść do potęgi 3 stopnia, a następnie zwrócić powstałą listę.
-7. Dla chętnych Stworzyć skrypt pythonowy, który połączy się z API, które zawiera
-informacje o browarach (dokumentacja
-https://www.openbrewerydb.org/documentation).
-Należy w pythonie zrobić klasę Brawery , która będzie zawierała takie atrybuty jakich
-dostarcza API wraz z odpowiednim typowaniem.
-W klasie należy zaimplementować magiczną metodę __str__ która będzie
-opisywała dane przechowywane w obiekcie.
-Skrypt ma się połączyć do API i pobrać 20 pierwszych obiektów, a następnie
-utworzyć listę 20 instancji klasy Brawery , którą przeiteruje i wyświetli każdy obiekt z
-osobna.
-8. Dla chętnych Rozszeczyć skrypt z punktu 7 o przyjmowanie parametru city , który
-może być przekazywany w wierszu poleceń podczas wykonywania (np. python
-main.py --city=Berlin ). Należy wykorzystać moduł argparse do wczytywania
-przekazywanych parametrów, a w razie przekazania wartości ograniczyć pobierane
-browary do miasta, które zostało wskazane.
+1. Stworzyć klasę Student , która posiada 2 parametry (name i marks) oraz jedną metodę is_passed, która zwraca wartość
+logiczną, pozytywną gdy ocena jest > 50 w przeciwnym przypadku negatywną. Następnie należy stworzyć 2 przykładowe
+obiekty klasy, tak aby dla pierwszego obiektu metoda zwracała true , a dla drugiego false .
+2. Stworzyć następujące klasy:
 
-Implemented all of them in assignment package, but strugle with unit testing in Python :') 
+Zajęcia 4 3
+
+Library (klasa opisująca bibliotekę), posiadająca pola:
+city
+street
+zip_code
+open_hours (str)
+phone
+Order (klasa opisująca zamówienie), posiadająca pola:
+employee
+student
+books
+order_date
+Employee (klasa opisująca pracownika biblioteki), posiadająca pola:
+first_name
+last_name
+hire_date
+birth_date
+city
+street
+zip_code
+phone
+Book (klasa opisująca książkę), posiadająca pola
+library
+publication_date
+author_name
+author_surname
+number_of_pages
+Dodatkowo:
+Każda klasa ma mieć zaimplementowaną metodę __str__ , która będzie opisywała obiekt oraz ewentualne obiekty
+znajdujące się w tym obiekcie (np. obiekt Library w obiekcie Book).
+Pola w klasie mają być zdefiniowane jako atrybuty ustawiane podczas tworzenia instancji klasy za pośrednictwem
+konstruktora.
+Stworzyć 2 biblioteki (2 instancje klasy), 5 książek, 3 pracowników, 3 studentów, oraz 2 zamówienia.
+Wyświetlić oba zamówienia ( print )
+3. Stworzyć następujące klasy:
+Property (klasa opisująca posiadłość/nieruchomość), posiadająca pola:
+area
+rooms (int)
+price
+address
+
+Zajęcia 4 4
+
+House (klasa dziedzicząca klasę Property , która opisuje dom), posiadająca pola:
+plot (rozmiar działki, int)
+Flat (klasa dziedzicząca klasę Property , która opisuje mieszkanie), posiadająca pola:
+floor
+Dodatkowo:
+Każda z klas dziedziczących ma mieć zaimplementowaną metodę __str__ , która będzie opisywała obiekt.
+Pola w klasie mają być zdefiniowane jako atrybuty ustawiane podczas tworzenia instancji klasy za pośrednictwem
+konstruktora.
+Stworzyć po jednym obiekcie klasy House oraz Flat, a następnie je wyświetlić.
+4. Zadania dla chętnych obowiązują z zajęć wcześniejszych.
+
+### Running Tests
+```bash
+ python -m unittest discover -s tests -p '*_test.py'
+```
