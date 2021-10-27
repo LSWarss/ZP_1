@@ -12,5 +12,6 @@ jobs:
           python3 --version
       - name: Run Tests
         run: |
+          ls
           cd 'assignment_4/'
           python3 -m unittest discover -s 'tests/' -p '*_test.py'
