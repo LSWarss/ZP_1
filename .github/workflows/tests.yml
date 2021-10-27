@@ -12,10 +12,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      
-      - name: Lsing
-        run: |
-          ls -la 
       - name: Run Tests
         run: |
           python3 -m unittest discover -s assignment_3 -p '*_test.py'
