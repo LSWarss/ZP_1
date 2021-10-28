@@ -7,7 +7,7 @@ class House(Property):
         self._plot = plot
     
     def __init__(self, property: Property, plot: int):
-        super().__init__(property.area(),property.rooms(), property.price(), property.address())
+        super().__init__(property.area,property.rooms, property.price, property.address)
         self._plot = plot
 
     def __str__(self) -> str:

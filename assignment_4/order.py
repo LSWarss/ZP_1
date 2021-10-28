@@ -12,4 +12,4 @@ class Order():
         self._order_date = order_date
     
     def __str__(self) -> str:
-        return f"Order by: {self._employee}, for student: {self._student.__str__()}, with {self._books.count} books, order on: {self._order_date}"
+        return f"Order by: {self._employee}, for student: {self._student.__str__()}, with {len(self._books)} books, order on: {self._order_date}"

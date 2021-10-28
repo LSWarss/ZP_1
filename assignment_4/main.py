@@ -27,9 +27,14 @@ student2 = Student("Michał", 1)
 student3 = Student("Michał", 20)
 
 order1 = Order(employee1, student1, [book1, book2, book3, book4, book5], datetime.now())
-order1 = Order(employee2, student2, [book3, book4, book5], datetime.now())
+order2 = Order(employee2, student2, [book3, book4, book5], datetime.now())
 
 property = Property(42.0, 2, 420.000, "Katowica 1")
 house = House(property, 200)
 flat = Flat(property, 2)
+
+print(order1.__str__())
+print(order2.__str__())
+print(house.__str__())
+print(flat.__str__())
 
