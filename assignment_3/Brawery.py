@@ -7,28 +7,35 @@ import requests
 
 T = TypeVar("T")
 
+
 def from_int(x: Any) -> int:
     assert isinstance(x, int) and not isinstance(x, bool)
     return x
+
 
 def from_str(x: Any) -> str:
     assert isinstance(x, str)
     return x
 
+
 def from_none_or_str(x: Any) -> Union[str, Any]:
     assert x is None | isinstance(x, str)
     return x
+
 
 def from_none(x: Any) -> Any:
     assert x is None
     return x
 
+
 def from_datetime(x: Any) -> datetime:
     return parser.parse(x)
+
 
 def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
     assert isinstance(x, list)
     return [f(y) for y in x]
+
 
 def to_class(c: Type[T], x: Any) -> dict:
     assert isinstance(x, c)
@@ -55,7 +62,7 @@ class Brawery:
     created_at: datetime
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Brawery':
+    def from_dict(obj: Any) -> "Brawery":
         assert isinstance(obj, dict)
         id = from_str(obj.get("id"))
         name = from_str(obj.get("name"))
@@ -73,7 +80,24 @@ class Brawery:
         website_url = obj.get("website_url")
         updated_at = from_datetime(obj.get("updated_at"))
         created_at = from_datetime(obj.get("created_at"))
-        return Brawery(id, name, brewery_type, address_2, address_3, city, state, county_province, postal_code, country, longitude, latitude, phone, website_url, updated_at, created_at)
+        return Brawery(
+            id,
+            name,
+            brewery_type,
+            address_2,
+            address_3,
+            city,
+            state,
+            county_province,
+            postal_code,
+            country,
+            longitude,
+            latitude,
+            phone,
+            website_url,
+            updated_at,
+            created_at,
+        )
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -98,8 +122,10 @@ class Brawery:
     def __str__(self) -> str:
         self.to_dict.__str__
 
+
 def brawery_from_dict(s: Any) -> List[Brawery]:
     return from_list(Brawery.from_dict, s)
+
 
 def getBraweries() -> List[Brawery]:
     """Returns list of `Brawery` objects
@@ -111,6 +137,7 @@ def getBraweries() -> List[Brawery]:
     result = brawery_from_dict(json.loads(r.text))
     return result
 
+
 def getBraweriesForCity(city: str) -> List[Brawery]:
     """Returns Brawerys connected to given city
 
@@ -118,8 +145,9 @@ def getBraweriesForCity(city: str) -> List[Brawery]:
         city (str): City where you want to search Braweries in
 
     Returns:
-        List[Brawery]: List of braweries connected with given city 
+        List[Brawery]: List of braweries connected with given city
     """
-    r = requests.get(f"https://api.openbrewerydb.org/breweries/search?query={city}")
+    link = f"https://api.openbrewerydb.org/breweries/search?query={city}"
+    r = requests.get(link)
     result = brawery_from_dict(json.loads(r.text))
     return result

@@ -2,9 +2,9 @@ import unittest
 import sys
 import io
 
+
 # extend unittest.TestCase with new functionality
 class TestCase(unittest.TestCase):
-
     def assertStdout(self, expected_output):
         return _AssertStdoutContext(self, expected_output)
 
@@ -14,9 +14,7 @@ class TestCase(unittest.TestCase):
         return _AssertStdoutContext(self, expected_output)
 
 
-
 class _AssertStdoutContext:
-
     def __init__(self, testcase, expected):
         self.testcase = testcase
         self.expected = expected
