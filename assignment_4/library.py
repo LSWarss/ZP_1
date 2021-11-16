@@ -6,5 +6,5 @@ class Library:
         self._phone = phone
 
     def __str__(self) -> str:
-        return f"""Library in {self._city}, on street: {self._street}, with
-        open hours: {self._open_hours} and phone number: {self._phone}"""
+        return f"""Library in {self._city}, on street: {self._street}, with 
+open hours: {self._open_hours} and phone number: {self._phone}"""

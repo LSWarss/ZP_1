@@ -11,4 +11,6 @@ class EmployeeTestCase(unittest.TestCase):
     def test_str(self):
         hire_Str = datetime.datetime.now().strftime("%x")
         birth_Str = datetime.datetime.now().strftime("%x")
-        self.assertEqual(self.employee.__str__(), f"Employee: Test TestSur hired on: {hire_Str}, born on: {birth_Str} living in city: TestC, on street TestS, 42-500, phone: 666-666-666")
+        self.assertEqual(self.employee.__str__(), f"""Employee: Test TestSur hired on: {hire_Str}, 
+born on: {birth_Str} living in city: TestC, 
+on street TestS, 42-500, phone: 666-666-666""")

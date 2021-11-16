@@ -9,6 +9,6 @@ class LibraryTestCase(unittest.TestCase):
     def test_is_passed(self):
         self.assertEqual(
             self.library.__str__(),
-            """Library in Test, on street: Test, with open hours: 21 - 37 and
-            phone number: 666-666-666""",
+"""Library in Test, on street: Test, with 
+open hours: 21 - 37 and phone number: 666-666-666""",
         )
