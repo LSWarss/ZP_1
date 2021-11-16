@@ -25,6 +25,7 @@ class Employee:
     def __str__(self) -> str:
         hire_str = self._hire_date.strftime("%x")
         birth_str = self._birth_date.strftime("%x")
-        return f"""Employee: {self._first_name} {self._last_name} hired on: {hire_str}, 
-born on: {birth_str} living in city: {self._city}, 
-on street {self._street}, {self._zip_code}, phone: {self._phone}"""
+        return f"""Employee: {self._first_name} {self._last_name}
+ hired on: {hire_str},
+ born on: {birth_str} living in city: {self._city},
+ on street {self._street}, {self._zip_code}, phone: {self._phone}"""

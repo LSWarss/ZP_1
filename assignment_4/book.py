@@ -19,12 +19,12 @@ class Book:
 
     def __str__(self) -> str:
         publication = self._publication_date.strftime("%x")
-        return f"""Book from {self._library.__str__()} publicated 
-on: {publication}, author: {self._author_name} {self._author_surname}, 
-number of pages: {self._number_of_pages}"""
+        return f"""Book from {self._library.__str__()} publicated
+ on: {publication}, author: {self._author_name} {self._author_surname},
+ number of pages: {self._number_of_pages}"""
 
     def __str__(self) -> str:
-        return f"""Book from {self._library.__str__()} publicated on: 
-{self._publication_date}, 
-author: {self._author_name} {self._author_surname}, 
-number of pages: {self._number_of_pages}"""
+        return f"""Book from {self._library.__str__()} publicated on:
+ {self._publication_date},
+ author: {self._author_name} {self._author_surname},
+ number of pages: {self._number_of_pages}"""

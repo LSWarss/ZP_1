@@ -18,15 +18,19 @@ book3 = Book(library3, datetime.now(), "Taco", "Hemingway", 1)
 book4 = Book(library1, datetime.now(), "Taco", "Hemingway", 1)
 book5 = Book(library2, datetime.now(), "Taco", "Hemingway", 1)
 
-employee1 = Employee("Marcin", "Kaczka", datetime.now(), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
-employee2 = Employee("Marcin", "Kaczka", datetime.now(), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
-employee3 = Employee("Marcin", "Kaczka", datetime.now(), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
+employee1 = Employee("Marcin", "Kaczka", datetime.now(
+), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
+employee2 = Employee("Marcin", "Kaczka", datetime.now(
+), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
+employee3 = Employee("Marcin", "Kaczka", datetime.now(
+), datetime.now(), "Katowice", "Katowicka 1", "40-000", "666-666-666")
 
 student1 = Student("Michał", 50)
 student2 = Student("Michał", 1)
 student3 = Student("Michał", 20)
 
-order1 = Order(employee1, student1, [book1, book2, book3, book4, book5], datetime.now())
+order1 = Order(employee1, student1, [
+               book1, book2, book3, book4, book5], datetime.now())
 order2 = Order(employee2, student2, [book3, book4, book5], datetime.now())
 
 property = Property(42.0, 2, 420.000, "Katowica 1")
@@ -37,4 +41,3 @@ print(order1.__str__())
 print(order2.__str__())
 print(house.__str__())
 print(flat.__str__())
-

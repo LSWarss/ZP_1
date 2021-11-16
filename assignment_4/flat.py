@@ -8,7 +8,8 @@ class Flat(Property):
         self._floor = floor
 
     def __init__(self, property: Property, floor: int):
-        super().__init__(property.area,property.rooms, property.price, property.address)
+        super().__init__(property.area, property.rooms,
+                         property.price, property.address)
         self._floor = floor
 
     def __str__(self) -> str:

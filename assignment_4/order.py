@@ -2,6 +2,7 @@ import datetime
 from employee import Employee
 from book import Book
 from student import Student
+from typing import List
 
 
 class Order:
@@ -9,7 +10,7 @@ class Order:
         self,
         employee: str,
         student: Student,
-        books: list[Book],
+        books: List[Book],
         order_date: datetime.date,
     ):
         self._employee = employee
