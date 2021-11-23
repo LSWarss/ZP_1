@@ -16,7 +16,7 @@ class Movie():
 
 class Movies(Resource):
 
-    movies: List[str] = []
+    movies: List[Movie] = []
 
     def __init__(self) -> None:
         super().__init__()
