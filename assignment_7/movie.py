@@ -6,12 +6,12 @@ import csv
 class Movie():
 
     def __init__(self, movieId: int, title: str, genres: List[str]):
-        self._movieId = movieId
-        self._title = title
-        self._genres = genres
+        self.id = movieId
+        self.title = title
+        self.genres = genres
 
     def __str__(self) -> str:
-        return f"Movie {self._movieId}: {self._title}, genres: {self._genres}"
+        return f"Movie {self.id}: {self.title}, genres: {self.genres}"
 
 
 class Movies(Resource):
