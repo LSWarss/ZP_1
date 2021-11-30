@@ -25,7 +25,7 @@ class Tags(Resource):
 
     def __init__(self) -> None:
         super().__init__()
-        with open("tags.csv", newline='') as tag_file:
+        with open("assingment_7_8/tags.csv", newline='') as tag_file:
             tags_row = csv.reader(tag_file, delimiter=",")
             for row in tags_row:
                 self.tags.append(Tag(row[0], row[1], row[2], row[3]))

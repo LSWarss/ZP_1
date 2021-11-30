@@ -21,7 +21,7 @@ class Links(Resource):
 
     def __init__(self) -> None:
         super().__init__()
-        with open("links.csv", newline='') as link_file:
+        with open("assignment_7_8/links.csv", newline='') as link_file:
             link_rows = csv.reader(link_file, delimiter=",")
             for row in link_rows:
                 self.links.append(Link(row[0], row[1], row[2]))

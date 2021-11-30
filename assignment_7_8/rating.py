@@ -27,7 +27,7 @@ class Ratings(Resource):
 
     def __init__(self) -> None:
         super().__init__()
-        with open("ratings.csv", newline='') as rating_file:
+        with open("assingment_7_8/ratings.csv", newline='') as rating_file:
             rating_rows = csv.reader(rating_file, delimiter=",")
             for row in rating_rows:
                 self.ratings.append(Rating(row[0], row[1], row[2], row[3]))

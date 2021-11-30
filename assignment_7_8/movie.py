@@ -20,7 +20,7 @@ class Movies(Resource):
 
     def __init__(self) -> None:
         super().__init__()
-        with open("movies.csv", newline='') as movies_file:
+        with open("assignment_7_8/movies.csv", newline='') as movies_file:
             moviesRows = csv.reader(movies_file, delimiter=",")
             for row in moviesRows:
                 self.movies.append(Movie(row[0], row[1], row[2].split("|")))
