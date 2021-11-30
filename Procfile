@@ -1,1 +1,1 @@
-web: gunicorn assignment_7_8.main
+web: gunicorn wsgi:app
