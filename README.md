@@ -1,10 +1,10 @@
 # Advanced Programming
 
-## Lab 9 Branch
+## Lab 10 Branch
 ---
 ### List of assignments: 
 
-Deploy REST API to hereoku
+Creating docker image and using docker compose
 
 ### Running Tests
 ```bash
