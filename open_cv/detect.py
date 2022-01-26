@@ -20,7 +20,8 @@ class Detector():
             person += 1
 
         cv2.putText(frame, f'Total Persons : {person-1}',
-                    (40, 40), cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.8, (0, 0, 255), 2)
+                    (40, 40), cv2.FONT_HERSHEY_COMPLEX_SMALL,
+                    0.8, (0, 0, 255), 2)
         cv2.imshow('output', frame)
 
         return frame
