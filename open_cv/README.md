@@ -3,5 +3,5 @@
 ## How to use:
 
 ```
-python main.py --images <your image> 
+python main.py --image <your image> 
 ```
